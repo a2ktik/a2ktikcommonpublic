@@ -8,10 +8,10 @@ Public assets for a2ktik projects
 `pubspec.yaml`:
 
 ```yaml
-  tekaly_assets:
+  a2ktik_asset:
     git:
-      url: https://github.com/tekartikprj/tekaly.git
-      path: packages/tekaly_assets
+      url: https://github.com/a2ktik/a2ktikcommonpublic
+      path: packages/a2ktik_asset
       ref: dart3a
 ```
 
