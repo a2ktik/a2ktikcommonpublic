@@ -27,6 +27,26 @@ dependencies:
       url: https://github.com/tekaly/festenao
       ref: dart3a
       path: packages_flutter/festenao_lyrics_player
+  festenao_media_base_app:
+    git:
+      url: https://github.com/tekaly/festenao
+      ref: dart3a
+      path: packages_flutter/festenao_media_base_app
+  festenao_common_flutter:
+    git:
+      url: https://github.com/tekaly/festenao
+      ref: dart3a
+      path: packages_flutter/festenao_common_flutter
+  playlr_audio_player:
+    git:
+      url: https://github.com/tekaly/playlr.git
+      ref: dart3a
+      path: packages_flutter/playlr_audio_player
+  tekartik_file_cache_flutter:
+    git:
+      url: https://github.com/tekaly/playlr.git
+      ref: dart3a
+      path: packages_flutter/file_cache_flutter
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -39,7 +59,7 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  # assets:
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
