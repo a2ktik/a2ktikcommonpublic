@@ -67,11 +67,11 @@ class _KarController implements KarController {
   late final ready = () async {
     await karReady;
     if (disposed) {
-      return;
+      return false;
     }
     var lyrics = await lyricsSource.getString();
     if (disposed) {
-      return;
+      return false;
     }
     lyricsDataControllerOrNull = LyricsDataController(
       lyricsData: parseLyricLrc(lyrics),
@@ -95,6 +95,7 @@ class _KarController implements KarController {
         lyricsDataControllerOrNull?.update((state ?? Duration.zero));
       }
     }().unawait();
+    return true;
   }();
 
   /// The audio player for the karaoke player
@@ -133,5 +134,5 @@ extension KarControllerPrvExt on KarController {
   /// Song audio player
   //SongAudioPlayer get songPlayer => _self.songPlayer;
   /// Ready
-  Future<void> get ready => _self.ready;
+  Future<bool> get ready => _self.ready;
 }

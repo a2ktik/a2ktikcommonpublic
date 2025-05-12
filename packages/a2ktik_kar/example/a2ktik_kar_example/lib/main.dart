@@ -1,3 +1,4 @@
+import 'package:a2ktik_kar_example/screen/can_progress_bar_screen.dart';
 import 'package:a2ktik_kar_example/screen/play_audio_screen.dart';
 import 'package:festenao_media_base_app/festenao_widget.dart';
 // ignore: unused_import
@@ -51,9 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
     sleep(0).then((_) {
       // ignore: dead_code
       if (false) {
-        // if (devWarning(true) && kDebugMode) {
+        //if (devWarning(true) && kDebugMode) {
         if (mounted) {
-          goToAudioPlayer(context);
+          goToCanScreen(context);
         }
       }
     });
@@ -80,6 +81,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
+            BodyContainer(
+              child: TilePadding(
+                child: Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      goToCanScreen(context);
+                    },
+                    child: const Text('Can animation demo'),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -98,6 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
               start: Duration(seconds: 6),
             ),
           ),
+    );
+  }
+
+  void goToCanScreen(BuildContext context) {
+    ContentNavigator.pushBuilder<void>(
+      context,
+      builder: (context) => const CanAnimationPage(),
     );
   }
 }

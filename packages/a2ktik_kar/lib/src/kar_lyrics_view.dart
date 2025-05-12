@@ -29,7 +29,7 @@ class _KarLyricsViewState extends State<KarLyricsView> {
     return FutureBuilder(
       future: controller.ready,
       builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
+        if (snapshot.data != true) {
           return Container();
         }
 
