@@ -130,15 +130,13 @@ extension KarControllerPrvExt on KarController {
 
   /// Lyrics data controller
   LyricsDataController get lyricsDataController => _self.lyricsDataController;
-
-  /// Song audio player
-  //SongAudioPlayer get songPlayer => _self.songPlayer;
-  /// Ready
-  Future<bool> get ready => _self.ready;
 }
 
 /// Extension for the karaoke controller (public)
 extension KarControllerExt on KarController {
+  /// Ready
+  Future<bool> get ready => _self.ready;
+
   /// position stream
   Stream<Duration?> get positionStream => _self.songPlayer.positionStream;
 }
