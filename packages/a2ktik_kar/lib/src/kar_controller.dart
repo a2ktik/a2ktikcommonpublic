@@ -124,7 +124,7 @@ class _KarController implements KarController {
   }
 }
 
-/// Extension for the karaoke controller (private
+/// Extension for the karaoke controller (private)
 extension KarControllerPrvExt on KarController {
   _KarController get _self => this as _KarController;
 
@@ -135,4 +135,10 @@ extension KarControllerPrvExt on KarController {
   //SongAudioPlayer get songPlayer => _self.songPlayer;
   /// Ready
   Future<bool> get ready => _self.ready;
+}
+
+/// Extension for the karaoke controller (public)
+extension KarControllerExt on KarController {
+  /// position stream
+  Stream<Duration?> get positionStream => _self.songPlayer.positionStream;
 }
