@@ -105,10 +105,14 @@ class _AudioKaraokePlayerState
                           child: SizedBox(
                             //height: 150,
                             child: AspectRatio(
-                              aspectRatio: 16 / 2.5,
+                              aspectRatio: 16 / 4.5,
                               child: KarLyricsView(
                                 controller: karController,
-                                style: LyricsDataPlayerStyle.defaultDark,
+                                style: LyricsDataPlayerStyle.defaultDark
+                                    .copyWith(
+                                      lineCount: 3,
+                                      textScaler: const TextScaler.linear(1.5),
+                                    ),
                               ),
                             ),
                           ),

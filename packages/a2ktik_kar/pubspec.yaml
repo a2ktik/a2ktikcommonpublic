@@ -1,6 +1,6 @@
 name: a2ktik_kar
 description: "A2ktik Karaoke helpers"
-version: 0.0.1
+version: 0.1.1
 homepage:
 publish_to: none
 
@@ -27,6 +27,7 @@ dependencies:
       url: https://github.com/tekaly/festenao
       ref: dart3a
       path: packages_flutter/festenao_lyrics_player
+    version: '>=0.1.1'
   festenao_media_base_app:
     git:
       url: https://github.com/tekaly/festenao
