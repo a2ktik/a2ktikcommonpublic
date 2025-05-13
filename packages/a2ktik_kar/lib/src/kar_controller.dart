@@ -24,7 +24,7 @@ abstract class KarController {
   KarLyricsSource get lyricsSource;
 
   /// Play
-  Future<void> play({Duration? start, Duration? end});
+  Future<void> play({Duration? start, Duration? end, double? playbackRate});
 
   /// Pause
   Future<void> pause();
@@ -100,9 +100,17 @@ class _KarController implements KarController {
 
   /// The audio player for the karaoke player
   @override
-  Future<void> play({Duration? start, Duration? end}) async {
+  Future<void> play({
+    Duration? start,
+    Duration? end,
+    double? playbackRate,
+  }) async {
     await ready;
-    await songPlayer.playFromTo(from: start, to: end);
+    await songPlayer.playFromTo(
+      from: start,
+      to: end,
+      playbackRate: playbackRate,
+    );
   }
 
   @override
@@ -139,4 +147,7 @@ extension KarControllerExt on KarController {
 
   /// position stream
   Stream<Duration?> get positionStream => _self.songPlayer.positionStream;
+
+  /// True if playing
+  bool get isPlaying => _self.songPlayer.isPlayingSync();
 }

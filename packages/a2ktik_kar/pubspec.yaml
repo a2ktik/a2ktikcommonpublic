@@ -1,6 +1,6 @@
 name: a2ktik_kar
 description: "A2ktik Karaoke helpers"
-version: 0.1.1
+version: 0.2.0
 homepage:
 publish_to: none
 
@@ -21,7 +21,7 @@ dependencies:
       url: https://github.com/tekaly/playlr.git
       path: packages_flutter/playlr_audio_player_blue_fire
       ref: dart3a
-    version: '>=0.0.1'
+    version: '>=0.3.0'
   festenao_lyrics_player:
     git:
       url: https://github.com/tekaly/festenao
