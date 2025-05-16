@@ -11,10 +11,14 @@ abstract class KarController {
     required AppAudioPlayer appAudioPlayer,
     required KarAudioSource audioSource,
     required KarLyricsSource lyricsSource,
+    Duration? start,
+    Duration? end,
   }) => _KarController(
     audioSource: audioSource,
     lyricsSource: lyricsSource,
     appAudioPlayer: appAudioPlayer,
+    start: start,
+    end: end,
   );
 
   /// The audio source for the karaoke player
@@ -44,12 +48,16 @@ class _KarController implements KarController {
 
   SongAudioPlayer get songPlayer => songPlayerOrNull!;
   SongAudioPlayer? songPlayerOrNull;
+  final Duration? start;
+  final Duration? end;
 
   /// Creates a new karaoke controller
   _KarController({
     required this.audioSource,
     required this.lyricsSource,
     required this.appAudioPlayer,
+    required this.start,
+    required this.end,
   });
 
   var disposed = false;
@@ -74,7 +82,7 @@ class _KarController implements KarController {
       return false;
     }
     lyricsDataControllerOrNull = LyricsDataController(
-      lyricsData: parseLyricLrc(lyrics),
+      lyricsData: parseLyricLrc(lyrics).extractFromTo(from: start, to: end),
     );
     if (audioSource is! KarAudioSourceAsset) {
       throw Exception('Audio source is not a KarAudioSource');
@@ -107,8 +115,8 @@ class _KarController implements KarController {
   }) async {
     await ready;
     await songPlayer.playFromTo(
-      from: start,
-      to: end,
+      from: start ?? this.start,
+      to: end ?? this.end,
       playbackRate: playbackRate,
     );
   }
