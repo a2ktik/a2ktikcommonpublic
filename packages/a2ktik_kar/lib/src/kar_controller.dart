@@ -158,4 +158,9 @@ extension KarControllerExt on KarController {
 
   /// True if playing
   bool get isPlaying => _self.songPlayer.isPlayingSync();
+
+  /// Get current position
+  Future<Duration?> getCurrentPosition() {
+    return _self.songPlayer.getCurrentPosition();
+  }
 }
