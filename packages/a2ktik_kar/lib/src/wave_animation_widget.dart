@@ -177,10 +177,9 @@ class _WavePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint =
-        Paint()
-          ..color = waveColor
-          ..style = PaintingStyle.fill;
+    final paint = Paint()
+      ..color = waveColor
+      ..style = PaintingStyle.fill;
 
     final path = Path();
 

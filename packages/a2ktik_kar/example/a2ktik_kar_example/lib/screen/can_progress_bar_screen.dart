@@ -17,12 +17,11 @@ class _CanAnimationPageState extends State<CanAnimationPage>
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 4),
-    )..addListener(() {
-      setState(() {}); // Rebuild the widget as the animation progresses
-    });
+    _controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 4))
+          ..addListener(() {
+            setState(() {}); // Rebuild the widget as the animation progresses
+          });
 
     _animation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
 

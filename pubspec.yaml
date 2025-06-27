@@ -1,0 +1,8 @@
+name: _
+publish_to: none
+environment:
+  sdk: ^3.8.0
+workspace:
+  - packages/a2ktik_asset
+  - packages/a2ktik_kar
+  - packages/a2ktik_kar/example/a2ktik_kar_example

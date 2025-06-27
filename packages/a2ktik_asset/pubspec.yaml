@@ -4,7 +4,7 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.7.0
+  sdk: ^3.8.0
 
 # Add regular dependencies here.
 dependencies:
@@ -18,3 +18,4 @@ dev_dependencies:
       ref: dart3a
       path: packages/lints_flutter
   test: ">=1.24.0"
+resolution: workspace

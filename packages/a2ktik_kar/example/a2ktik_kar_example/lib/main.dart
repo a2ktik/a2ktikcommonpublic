@@ -103,15 +103,14 @@ class _MyHomePageState extends State<MyHomePage> {
   void goToAudioPlayer(BuildContext context) {
     ContentNavigator.pushBuilder<void>(
       context,
-      builder:
-          (context) => const AudioKaraokePlayer(
-            params: AudioKaraokeParams(
-              title: 'Test',
-              audioId: assetAudioExample1,
-              lrcId: assetLyricsExample1,
-              start: Duration(seconds: 6),
-            ),
-          ),
+      builder: (context) => const AudioKaraokePlayer(
+        params: AudioKaraokeParams(
+          title: 'Test',
+          audioId: assetAudioExample1,
+          lrcId: assetLyricsExample1,
+          start: Duration(seconds: 6),
+        ),
+      ),
     );
   }
 

@@ -94,71 +94,69 @@ class _AudioKaraokePlayerState
             // Set the title of the app
             title: Text(widget.params.title),
           ),
-          body:
-              ready
-                  ? ListView(
-                    // Create a ListView for scrolling through multiple widgets
-                    padding: const EdgeInsets.all(8),
-                    children: <Widget>[
-                      BodyContainer(
-                        child: TilePadding(
-                          child: SizedBox(
-                            //height: 150,
-                            child: AspectRatio(
-                              aspectRatio: 16 / 4.5,
-                              child: KarLyricsView(
-                                controller: karController,
-                                style: LyricsDataPlayerStyle.defaultDark
-                                    .copyWith(
-                                      lineCount: 3,
-                                      textScaler: const TextScaler.linear(1.5),
-                                    ),
+          body: ready
+              ? ListView(
+                  // Create a ListView for scrolling through multiple widgets
+                  padding: const EdgeInsets.all(8),
+                  children: <Widget>[
+                    BodyContainer(
+                      child: TilePadding(
+                        child: SizedBox(
+                          //height: 150,
+                          child: AspectRatio(
+                            aspectRatio: 16 / 4.5,
+                            child: KarLyricsView(
+                              controller: karController,
+                              style: LyricsDataPlayerStyle.defaultDark.copyWith(
+                                lineCount: 3,
+                                textScaler: const TextScaler.linear(1.5),
                               ),
                             ),
                           ),
                         ),
                       ),
-                      // Play button to start video playback
-                      BodyContainer(
-                        child: Center(
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              IconButton(
-                                onPressed: () {
-                                  muiSnack(context, 'paused');
-                                  karController.pause();
-                                },
-                                icon: const Icon(Icons.pause_circle, size: 50),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  muiSnack(context, 'playing');
-                                  karController.resume();
-                                  // Call the play method on the controller to start playback
-                                  //_controller?.play.call();
-                                },
-                                icon: const Icon(Icons.play_circle, size: 50),
-                              ),
-                            ],
-                          ),
+                    ),
+                    // Play button to start video playback
+                    BodyContainer(
+                      child: Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                muiSnack(context, 'paused');
+                                karController.pause();
+                              },
+                              icon: const Icon(Icons.pause_circle, size: 50),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                muiSnack(context, 'playing');
+                                karController.resume();
+                                // Call the play method on the controller to start playback
+                                //_controller?.play.call();
+                              },
+                              icon: const Icon(Icons.play_circle, size: 50),
+                            ),
+                          ],
                         ),
                       ),
-                      Builder(
-                        builder: (_) {
-                          if (!ready) {
-                            return const Center(
-                              child: CircularProgressIndicator(),
-                            );
-                          }
-                          return AppAudioPlayerWidget(
-                            player: appAudioPlayer,
-                            song: null,
+                    ),
+                    Builder(
+                      builder: (_) {
+                        if (!ready) {
+                          return const Center(
+                            child: CircularProgressIndicator(),
                           );
-                        },
-                      ),
-                      // Pause button to stop video playback
-                      /*
+                        }
+                        return AppAudioPlayerWidget(
+                          player: appAudioPlayer,
+                          song: null,
+                        );
+                      },
+                    ),
+                    // Pause button to stop video playback
+                    /*
               Row(
                 // Align buttons to the center of the row
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -197,9 +195,9 @@ class _AudioKaraokePlayerState
                 },
                 child: Text("SetPlaybackSpeed 0.5"),
               ),*/
-                    ],
-                  )
-                  : null,
+                  ],
+                )
+              : null,
         );
       },
     );
