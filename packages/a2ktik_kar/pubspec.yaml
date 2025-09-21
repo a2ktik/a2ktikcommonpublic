@@ -13,40 +13,33 @@ dependencies:
     git:
       url: https://github.com/a2ktik/a2ktikcommonpublic
       path: packages/a2ktik_asset
-      ref: dart3a
   flutter:
     sdk: flutter
   playlr_audio_player_blue_fire:
     git:
       url: https://github.com/tekaly/playlr.git
       path: packages_flutter/playlr_audio_player_blue_fire
-      ref: dart3a
     version: '>=0.3.0'
   festenao_lyrics_player:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_lyrics_player
     version: '>=0.1.1'
   festenao_media_base_app:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_media_base_app
   festenao_common_flutter:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_common_flutter
   playlr_audio_player:
     git:
       url: https://github.com/tekaly/playlr.git
-      ref: dart3a
       path: packages_flutter/playlr_audio_player
   tekartik_file_cache_flutter:
     git:
       url: https://github.com/tekaly/playlr.git
-      ref: dart3a
       path: packages_flutter/file_cache_flutter
 dev_dependencies:
   flutter_test:

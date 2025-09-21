@@ -12,7 +12,6 @@ Public assets for a2ktik projects
     git:
       url: https://github.com/a2ktik/a2ktikcommonpublic
       path: packages/a2ktik_asset
-      ref: dart3a
 ```
 
 ## Usage
@@ -25,7 +24,6 @@ dependency:
   tekartik_web_splash:
     git:
       url: https://github.com/tekartik/app_web_utils.dart
-      ref: dart3a
       path: packages/web_splash
 
 flutter:

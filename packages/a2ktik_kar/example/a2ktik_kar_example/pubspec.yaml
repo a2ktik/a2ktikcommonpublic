@@ -38,31 +38,25 @@ dependencies:
     git:
       url: https://github.com/a2ktik/a2ktikcommonpublic
       path: packages/a2ktik_kar
-      ref: dart3a
   festenao_media_base_app:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_media_base_app
   festenao_audio_player:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_audio_player
   festenao_common_flutter:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_common_flutter
   tekaly_playlr_audio_assets:
     git:
       url: https://github.com/tekaly/playlr.git
-      ref: dart3a
       path: packages/playlr_audio_assets
   festenao_lyrics_player:
     git:
       url: https://github.com/tekaly/festenao
-      ref: dart3a
       path: packages_flutter/festenao_lyrics_player
 
 dev_dependencies:

@@ -9,5 +9,4 @@
     git:
       url: https://github.com/a2ktik/a2ktikcommonpublic
       path: packages/a2ktik_kar
-      ref: dart3a
 ```
