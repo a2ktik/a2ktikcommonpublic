@@ -23,6 +23,7 @@ class AudioKaraokeParams {
     this.end,
   });
 }
+
 // 16/9 = 1920/1080
 
 class AudioKaraokePlayer extends StatefulWidget {
